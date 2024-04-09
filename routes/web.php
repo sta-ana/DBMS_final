@@ -9,7 +9,8 @@ use App\Http\Livewire\User\Dashboard;
 use App\Http\Livewire\User\Document;
 use App\Http\Livewire\User\Login;
 use App\Http\Livewire\User\Register;
-use App\Http\Livewire\User\UploadCsv;
+use App\Http\Livewire\FileUpload;
+use App\Http\Livewire\ViewFile;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,10 +30,7 @@ Route::middleware(['guest'])->group(function () {
 });
 Route::middleware(['auth'])->group(function () {
     Route::get('/user/dashboard', Dashboard::class)->name('user.dashboard');
-    Route::get('/user/document', Document::class)->name('user.documents');
-
-    // route for file upload
-    Route::get('/user/upload-csv', Document::class)->name('user.upload-csv');
+    Route::get('/user/file-upload', FileUpload::class)->name('user.file-upload');
 });
 
 

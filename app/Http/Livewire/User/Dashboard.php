@@ -12,6 +12,6 @@ class Dashboard extends Component
     {
         $this->totalDocument = Document::count();
 
-        return view('livewire.user.dashboard')->layout('layouts.user-app');
+        return view('livewire.user.dashboard')->extends('layouts.user-app');
     }
 }

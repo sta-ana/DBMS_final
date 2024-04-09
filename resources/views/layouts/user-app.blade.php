@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>{{ $title }}</title>
+    <title>@yield('page-title')</title>
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
     @livewireStyles
 
@@ -55,13 +56,13 @@
                     <div class="nav">
                         <!-- Dashboard Route -->
                         <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link" href="{{ route('user.dashboard') }}">
+                        <a class="nav-link" href="{{ route('user.dashboard')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Dashboard
+                            Student List
                         </a>
 
                         <!-- Fileupload CSV  Route -->
-                        <a class="nav-link" href="{{ route('user.upload-csv') }}">
+                        <a class="nav-link" href="{{ route('user.file-upload') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Upload Student File
                         </a>                      
@@ -77,7 +78,7 @@
 
         <div id="layoutSidenav_content">
             <main>
-                {{ $slot }}
+                @yield('content')
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
@@ -94,9 +95,11 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
 </body>
 <script src="{{ asset('js/scripts.js') }}"></script>
 <script src="{{ asset('js/all.min.js') }}"></script>
