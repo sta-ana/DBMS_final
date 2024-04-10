@@ -9,6 +9,7 @@ use App\Http\Livewire\User\Dashboard;
 use App\Http\Livewire\User\Document;
 use App\Http\Livewire\User\Login;
 use App\Http\Livewire\User\Register;
+use App\Http\Livewire\User\AddStudent;
 use App\Http\Livewire\FileUpload;
 use App\Http\Livewire\ViewFile;
 use Illuminate\Support\Facades\Route;
@@ -34,6 +35,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/user/file-upload', FileUpload::class)->name('user.file-upload');
 
     Route::post('user/file-upload', [SchoolYearController::class, 'test'])->name('user.schoolyear.add');
+    Route::get('/user/Add-Student', AddStudent::class)->name('user.add-student');
+
 });
 
 

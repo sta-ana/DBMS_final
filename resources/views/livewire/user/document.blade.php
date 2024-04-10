@@ -61,64 +61,6 @@
                     </div>
                 </div>
             </div>
-        @endif
-
-        @if ($createForm == true)
-            <div class="container">
-                <button class="btn btn-success" wire:click='goback'>
-                    <span wire:loading.remove wire:target='goback'>GoBack</span>
-                    <span wire:loading wire:target='goback'>GoBack....</span>
-                </button>
-                <form wire:submit.prevent='create'>
-                    <div class="form-group my-1">
-                        <label for="">Enter Title</label>
-                        <input type="text" wire:model='title' class="form-control">
-                        @error('title')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <div class="form-group my-1">
-                        <label for="">Upload Document</label>
-                        <input type="file" wire:model='document' class="form-control">
-                        @error('document')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <button type='submit' class="btn btn-success">Save</button>
-                </form>
-            </div>
-        @endif
-
-        @if ($updateForm == true)
-            <div class="container">
-                <button class="btn btn-success" wire:click='goback'>
-                    <span wire:loading.remove wire:target='goback'>GoBack</span>
-                    <span wire:loading wire:target='goback'>GoBack....</span>
-                </button>
-                <form wire:submit.prevent='update({{ $edit_id }})'>
-                    <div class="form-group my-1">
-                        <label for="">Enter Title</label>
-                        <input type="text" wire:model='edit_title' class="form-control">
-                        @error('title')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <div class="form-group my-1">
-                        <label for="">Upload Document</label>
-                        <input type="file" wire:model='new_document' class="form-control">
-                        <input type="hidden" wire:model='old_document' class="form-control">
-                        @if ($new_document)
-                            <span>{{ $new_document }}</span>
-                        @else
-                            <span>{{ $old_document }}</span>
-                        @endif
-                        @error('document')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <button type='submit' class="btn btn-success">Save</button>
-                </form>
-            </div>
-        @endif
+        @endif     
     </div>
 </div>
