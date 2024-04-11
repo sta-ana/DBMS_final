@@ -68,7 +68,7 @@
                         <div>
                             <a class="nav-link" href="{{ route('user.add-student') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Add Student Data
+                                Add Student 
                             </a>
                         </div>
 

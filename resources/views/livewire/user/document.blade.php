@@ -22,7 +22,6 @@
                 </div>
             </div>
         @endif
-
         @if ($showTable == true)
             <div class="card">
                 <div class="card-body">
